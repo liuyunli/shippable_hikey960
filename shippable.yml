@@ -19,14 +19,12 @@ env:
 
 build:
 
-  pre_ci:
+  ci:
     - mkdir -p $SHIPPABLE_REPO_DIR/bin
     - PATH=$SHIPPABLE_REPO_DIR/bin:$PATH
     - curl https://storage.googleapis.com/git-repo-downloads/repo > $SHIPPABLE_REPO_DIR/bin/repo
     - chmod a+x $SHIPPABLE_REPO_DIR/bin/repo
-  # http://docs.shippable.com/ci/shippableyml/#ci
-  ci:
-    #- git clone https://github.com/OP-TEE/optee_os.git && cat optee_os/Makefile
+    # http://docs.shippable.com/ci/shippableyml/#ci
     - ls -al $SHIPPABLE_REPO_DIR/bin/*
     - echo $PATH
     - git clone https://github.com/linaro-swg/optee_android_manifest
