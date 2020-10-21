@@ -21,8 +21,10 @@ build:
 
   # http://docs.shippable.com/ci/shippableyml/#ci
   ci:
-    - git clone https://github.com/OP-TEE/optee_os.git && cat optee_os/Makefile
-
+    #- git clone https://github.com/OP-TEE/optee_os.git && cat optee_os/Makefile
+    - git clone https://github.com/linaro-swg/optee_android_manifest
+    - cd optee_android_manifest
+    - ./sync-p-hikey960.sh
 
 # Integrations are used to connect external resources to CI
 # http://docs.shippable.com/integrations/overview/
