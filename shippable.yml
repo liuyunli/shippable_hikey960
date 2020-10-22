@@ -1,5 +1,5 @@
 # Language setting http://docs.shippable.com/ci/languages/node/
-language: python:
+language: python
 python:
   - "3.7"
 # use this to control what branches get built.
